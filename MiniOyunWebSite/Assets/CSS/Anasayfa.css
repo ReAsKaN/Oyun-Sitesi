@@ -1,0 +1,62 @@
+﻿body {
+}
+.game-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.game-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.card-body {
+    padding: 15px;
+}
+
+.game-card.locked {
+    position: relative;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+    .game-card.locked::after {
+        content: "🔒";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        color: red;
+    }
+        
+
+    .hidden {
+    display: none;
+    }
+
+.filter-btn {
+    margin-right: 10px;
+}
+
+ .filter-btn.active {
+        background-color: #007bff;
+        color: #fff;
+ }
+

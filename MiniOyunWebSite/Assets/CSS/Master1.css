@@ -1,0 +1,61 @@
+﻿body {
+    background-color: #121212;
+}
+
+.navbar {
+    background-color: #1d1f26;
+}
+
+.navbar-nav .nav-link {
+    color: #B0B0B0;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #1E90FF;
+    }
+
+.btn-login {
+    color: #1E90FF;
+    border: 1px solid #1E90FF;
+}
+
+    .btn-login:hover {
+        background-color: #1E90FF;
+        color: white;
+    }
+
+.btn-signup {
+    background-color: #1E90FF;
+    color: white;
+}
+
+    .btn-signup:hover {
+        background-color: #1565C0;
+    }
+
+.footer {
+    background-color: #1d1f26;
+    color: #B0B0B0;
+    padding: 40px 0;
+}
+
+    .footer a {
+        color: #B0B0B0;
+        text-decoration: none;
+    }
+
+        .footer a:hover {
+            color: #1E90FF;
+        }
+
+    .footer .social-icons a {
+        font-size: 24px;
+        margin: 0 10px;
+        color: #B0B0B0;
+    }
+
+        .footer .social-icons a:hover {
+            color: #1E90FF;
+        }
+
+

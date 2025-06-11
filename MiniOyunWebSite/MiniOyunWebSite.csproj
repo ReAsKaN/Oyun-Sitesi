@@ -1,0 +1,394 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1FB6518-8070-4175-A76B-09EE2F792073}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MiniOyunWebSite</RootNamespace>
+    <AssemblyName>MiniOyunWebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44313</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=9.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.1.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2048.aspx" />
+    <Content Include="Anasayfa.aspx" />
+    <Content Include="Assets\CSS\Anasayfa.css" />
+    <Content Include="Assets\CSS\Master1.css" />
+    <Content Include="Assets\Images\2048thumb.png" />
+    <Content Include="Assets\Images\armorgameslogo.png" />
+    <Content Include="Assets\Images\Armor_Games_Logo_29.png" />
+    <Content Include="Assets\Images\candycrushthumb.png" />
+    <Content Include="Assets\Images\chromedinothumb.png" />
+    <Content Include="Assets\Images\doodlejumpthumb.png" />
+    <Content Include="Assets\Images\flappybirdthumb.jpg" />
+    <Content Include="Assets\Images\logo.png" />
+    <Content Include="Assets\Images\Logoo.png" />
+    <Content Include="Assets\Images\logoson.png" />
+    <Content Include="Assets\Images\minesweeperthumb.png" />
+    <Content Include="Assets\Images\snakethumb.png" />
+    <Content Include="Assets\Images\sudokuthumb.png" />
+    <Content Include="CandyCrush.aspx" />
+    <Content Include="ChromeDino.aspx" />
+    <Content Include="DoodleJump.aspx" />
+    <Content Include="Games\2048\2048.css" />
+    <Content Include="Games\2048\2048.js" />
+    <Content Include="Games\2048\index.html" />
+    <Content Include="Games\CandyCrush\background.jpg" />
+    <Content Include="Games\CandyCrush\candy.css" />
+    <Content Include="Games\CandyCrush\candy.js" />
+    <Content Include="Games\CandyCrush\images\blank.png" />
+    <Content Include="Games\CandyCrush\images\Blue-Striped-Horizontal.png" />
+    <Content Include="Games\CandyCrush\images\Blue-Striped-Vertical.png" />
+    <Content Include="Games\CandyCrush\images\Blue-Wrapped.png" />
+    <Content Include="Games\CandyCrush\images\Blue.png" />
+    <Content Include="Games\CandyCrush\images\Choco.png" />
+    <Content Include="Games\CandyCrush\images\Green-Striped-Horizontal.png" />
+    <Content Include="Games\CandyCrush\images\Green-Striped-Vertical.png" />
+    <Content Include="Games\CandyCrush\images\Green-Wrapped.png" />
+    <Content Include="Games\CandyCrush\images\Green.png" />
+    <Content Include="Games\CandyCrush\images\Orange-Striped-Horizontal.png" />
+    <Content Include="Games\CandyCrush\images\Orange-Striped-Vertical.png" />
+    <Content Include="Games\CandyCrush\images\Orange-Wrapped.png" />
+    <Content Include="Games\CandyCrush\images\Orange.png" />
+    <Content Include="Games\CandyCrush\images\Purple-Striped-Horizontal.png" />
+    <Content Include="Games\CandyCrush\images\Purple-Striped-Vertical.png" />
+    <Content Include="Games\CandyCrush\images\Purple-Wrapped.png" />
+    <Content Include="Games\CandyCrush\images\Purple.png" />
+    <Content Include="Games\CandyCrush\images\Red-Striped-Horizontal.png" />
+    <Content Include="Games\CandyCrush\images\Red-Striped-Vertical.png" />
+    <Content Include="Games\CandyCrush\images\Red-Wrapped.png" />
+    <Content Include="Games\CandyCrush\images\Red.png" />
+    <Content Include="Games\CandyCrush\images\Yellow-Striped-Horizontal.png" />
+    <Content Include="Games\CandyCrush\images\Yellow-Striped-Vertical.png" />
+    <Content Include="Games\CandyCrush\images\Yellow-Wrapped.png" />
+    <Content Include="Games\CandyCrush\images\Yellow.png" />
+    <Content Include="Games\CandyCrush\index.html" />
+    <Content Include="Games\ChromeDino\dino.css" />
+    <Content Include="Games\ChromeDino\dino.js" />
+    <Content Include="Games\ChromeDino\img\big-cactus1.png" />
+    <Content Include="Games\ChromeDino\img\big-cactus2.png" />
+    <Content Include="Games\ChromeDino\img\big-cactus3.png" />
+    <Content Include="Games\ChromeDino\img\bird1.png" />
+    <Content Include="Games\ChromeDino\img\bird2.png" />
+    <Content Include="Games\ChromeDino\img\cactus1.png" />
+    <Content Include="Games\ChromeDino\img\cactus2.png" />
+    <Content Include="Games\ChromeDino\img\cactus3.png" />
+    <Content Include="Games\ChromeDino\img\cloud.png" />
+    <Content Include="Games\ChromeDino\img\dino-dead.png" />
+    <Content Include="Games\ChromeDino\img\dino-duck1.png" />
+    <Content Include="Games\ChromeDino\img\dino-duck2.png" />
+    <Content Include="Games\ChromeDino\img\dino-jump.png" />
+    <Content Include="Games\ChromeDino\img\dino-run1.png" />
+    <Content Include="Games\ChromeDino\img\dino-run2.png" />
+    <Content Include="Games\ChromeDino\img\dino.png" />
+    <Content Include="Games\ChromeDino\img\game-over.png" />
+    <Content Include="Games\ChromeDino\img\reset.png" />
+    <Content Include="Games\ChromeDino\img\track.png" />
+    <Content Include="Games\ChromeDino\index.html" />
+    <Content Include="Games\DoodleJump\doodlejump.css" />
+    <Content Include="Games\DoodleJump\doodlejump.js" />
+    <Content Include="Games\DoodleJump\doodlejumpbg.png" />
+    <Content Include="Games\DoodleJump\doodler-left.png" />
+    <Content Include="Games\DoodleJump\doodler-right.png" />
+    <Content Include="Games\DoodleJump\index.html" />
+    <Content Include="Games\DoodleJump\platform-broken.png" />
+    <Content Include="Games\DoodleJump\platform.png" />
+    <Content Include="Games\FlappyBird\flappybird.js" />
+    <Content Include="Games\FlappyBird\flappybird.css" />
+    <Content Include="Games\FlappyBird\Images\bottompipe.png" />
+    <Content Include="Games\FlappyBird\Images\flappybird.png" />
+    <Content Include="Games\FlappyBird\Images\flappybirdbg.png" />
+    <Content Include="Games\FlappyBird\Images\toppipe.png" />
+    <Content Include="Games\FlappyBird\index.html" />
+    <Content Include="Games\FlappyBird\Sounds\bgm_mario.mp3" />
+    <Content Include="Games\FlappyBird\Sounds\sfx_die.wav" />
+    <Content Include="Games\FlappyBird\Sounds\sfx_hit.wav" />
+    <Content Include="Games\FlappyBird\Sounds\sfx_point.wav" />
+    <Content Include="Games\FlappyBird\Sounds\sfx_swooshing.wav" />
+    <Content Include="Games\FlappyBird\Sounds\sfx_wing.wav" />
+    <Content Include="Games\Minesweeper\index.html" />
+    <Content Include="Games\Minesweeper\minesweeper.css" />
+    <Content Include="Games\Minesweeper\minesweeper.js" />
+    <Content Include="Games\Snake\index.html" />
+    <Content Include="Games\Snake\snake.css" />
+    <Content Include="Games\Snake\snake.js" />
+    <Content Include="Games\Sudoku\index.html" />
+    <Content Include="Games\Sudoku\Sample Puzzle.png" />
+    <Content Include="Games\Sudoku\sudoku.css" />
+    <Content Include="Games\Sudoku\sudoku.js" />
+    <Content Include="Games\TicTacToe\index.html" />
+    <Content Include="Games\TicTacToe\tictactoe.css" />
+    <Content Include="Games\TicTacToe\tictactoe.js" />
+    <Content Include="Games\Wordle\index.html" />
+    <Content Include="Games\Wordle\wordle.css" />
+    <Content Include="Games\Wordle\wordle.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="Minesweeper.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Snake.aspx" />
+    <Content Include="Sudoku.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="Logout.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="2048.aspx.cs">
+      <DependentUpon>2048.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2048.aspx.designer.cs">
+      <DependentUpon>2048.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Anasayfa.aspx.cs">
+      <DependentUpon>Anasayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anasayfa.aspx.designer.cs">
+      <DependentUpon>Anasayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CandyCrush.aspx.cs">
+      <DependentUpon>CandyCrush.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CandyCrush.aspx.designer.cs">
+      <DependentUpon>CandyCrush.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChromeDino.aspx.cs">
+      <DependentUpon>ChromeDino.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChromeDino.aspx.designer.cs">
+      <DependentUpon>ChromeDino.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoodleJump.aspx.cs">
+      <DependentUpon>DoodleJump.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoodleJump.aspx.designer.cs">
+      <DependentUpon>DoodleJump.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Minesweeper.aspx.cs">
+      <DependentUpon>Minesweeper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Minesweeper.aspx.designer.cs">
+      <DependentUpon>Minesweeper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Snake.aspx.cs">
+      <DependentUpon>Snake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Snake.aspx.designer.cs">
+      <DependentUpon>Snake.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sudoku.aspx.cs">
+      <DependentUpon>Sudoku.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sudoku.aspx.designer.cs">
+      <DependentUpon>Sudoku.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Account\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Assets\JS\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58163</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44313/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

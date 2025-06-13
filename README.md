@@ -19,6 +19,9 @@ Bu proje, ASP.NET Web Forms kullanılarak geliştirilmiş bir mini oyun platform
 
 ## 📁 Proje Yapısı
 
+## 📁 Proje Yapısı
+
+```
 /MiniOyunWebSite
 │
 ├── Assets/           → Oyunlara ait görsel dosyalar
@@ -29,5 +32,6 @@ Bu proje, ASP.NET Web Forms kullanılarak geliştirilmiş bir mini oyun platform
 ├── OyunX.aspx        → Her oyuna ait ayrı oyun sayfaları (8 adet)
 ├── Web.config        → Uygulama yapılandırma dosyası
 └── ...
+```
 
 

@@ -21,11 +21,12 @@ Bu proje, ASP.NET Web Forms kullanılarak geliştirilmiş bir mini oyun platform
 
 /MiniOyunWebSite
 │
-├── Assets/ → Görsel dosyalar
-├── Scripts/ → JS dosyaları
-├── Styles/ → Özel CSS dosyaları
-├── Site1.Master → Master Page (layout)
-├── Default.aspx → Ana sayfa
-├── OyunX.aspx → Oyun sayfaları
-├── Web.config → Uygulama ayarları
+├── Assets/           → Oyunlara ait görsel dosyalar
+├── Scripts/          → JavaScript dosyaları
+├── Styles/           → Özel CSS stilleri
+├── Site1.Master      → Ortak şablon (Master Page)
+├── Default.aspx      → Ana sayfa (homepage)
+├── OyunX.aspx        → Her oyuna ait ayrı oyun sayfaları (8 adet)
+├── Web.config        → Uygulama yapılandırma dosyası
 └── ...
+

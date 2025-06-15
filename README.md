@@ -15,6 +15,7 @@ Bu proje, ASP.NET Web Forms kullanılarak geliştirilmiş bir mini oyun platform
 
 - ASP.NET Web Forms (C#)
 - HTML5 / CSS3 / Bootstrap 5
+- JavaScript
 - Visual Studio IDE
 
 
